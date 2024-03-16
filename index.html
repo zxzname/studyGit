@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>git学习</title>
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/point.css" />
+    <link rel="stylesheet" href="./css/branch.css">
   </head>
   <body>
     <div class="outerBox">
@@ -14,14 +16,47 @@
         <button>点击输出文本框内容</button>
       </div>
       <div class="pint">
-        <h4>
-            <p>1、初始化 Git 仓库：在你的项目文件夹中打开命令行，运行以下命令来初始化一个新的 Git 仓库<strong style="color: red;">git init</strong></p><br>
-            <p>2、添加文件到暂存区：使用以下命令将你的文件添加到 Git 暂存区（Index）中，准备提交<strong style="color: red;">git add .</strong></p> <br>
-            <p>3、提交文件到 Git 仓库：在命令行中，运行以下命令来提交文件到 Git 仓库中<strong style="color: red;">git commit -m "提交信息"</strong></p><br>
-            <p>4、关联远程仓库（可选）：如果你计划将代码推送到远程仓库（如 GitHub、GitLab 等），可以使用以下命令将本地仓库与远程仓库关联起来<strong style="color: red;">git remote add origin <远程仓库URL></strong></p><br>
-            <p>5、将代码推送到远程仓库（可选）：最后，如果你有关联远程仓库，可以使用以下命令将代码推送到远程仓库：<strong style="color: red;">git push -u origin master</strong></p><br>
-        </h4>
-    </div>
+        <h4>如何将新的代码提交到远程仓库？</h4>
+        <p>1、初始化 Git仓库：在你的项目文件夹中打开命令行，运行以下命令来初始化一个新的 Git仓库<strong style="color: red">git init</strong>
+        </p><br />
+        <p>
+          2、添加文件到暂存区：使用以下命令将你的文件添加到 Git
+          暂存区（Index）中，准备提交<strong style="color: red"
+            >git add .</strong
+          >
+        </p>
+        <br />
+        <p>
+          3、提交文件到 Git 仓库：在命令行中，运行以下命令来提交文件到 Git
+          仓库中<strong style="color: red">git commit -m "提交信息"</strong>
+        </p>
+        <br />
+        <h5>前三步只是将代码传到本地仓库，还要通过后两步将代码传到远程仓库</h5>
+        <p>
+          4、关联远程仓库（可选）：如果你计划将代码推送到远程仓库（如
+          GitHub、GitLab
+          等），可以使用以下命令将本地仓库与远程仓库关联起来<strong
+            style="color: red"
+            >git remote add origin <远程仓库URL></strong
+          >
+        </p>
+        <br />
+        <p>
+          5、将代码推送到远程仓库（可选）：最后，如果你有关联远程仓库，可以使用以下命令将代码推送到远程仓库：<strong
+            style="color: red"
+            >git push -u origin master</strong
+          >
+        </p>
+        <br />
+      </div>
+      <div class="branch">
+        <h4>如何创建新的分支？</h4>
+        <p><b>创建分支：</b>在本地仓库中，使用以下命令创建一个新的分支：<b>git branch branch-name</b>，其中 branch-name 是你要创建的分支名称。</p>
+        <p>切换到新创建的分支：git checkout branch-name 或 git switch branch-name。</p><br>
+        <p><b>在新分支上进行代码修改</b>在新分支上进行代码修改和开发工作</p><br>
+        <p><b>添加、提交代码</b>使用<b>git add . </b> 命令将修改的文件添加至暂存区;使用<b> git commit -m "提交信息" </b>命令提交代码到当前分支。</p><br>
+        <p><b>推送代码至远程仓库：</b>如果远程仓库还没有对应的分支，需要先创建远程分支：<b>git push origin branch-name</b>;接着将本地分支与远程分支关联并推送代码：<b>git push -u origin branch-name</b>。</p>
+      </div>
     </div>
   </body>
   <script src="./js/button.js"></script>
